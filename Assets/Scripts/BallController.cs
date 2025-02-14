@@ -26,6 +26,7 @@ public class BallController : MonoBehaviour
         launchIndicator.gameObject.SetActive(true);
         transform.parent = ballAnchor;
         transform.localPosition = Vector3.zero;
+
     }
 
     private void LaunchBall()
@@ -34,7 +35,6 @@ public class BallController : MonoBehaviour
         isBallLaunched = true;
         transform.parent = null;
         ballRB.isKinematic = false;
-        ballRB.AddForce(transform.forward * force, ForceMode.Impulse);
         ballRB.AddForce(launchIndicator.forward * force, ForceMode.Impulse);
         launchIndicator.gameObject.SetActive(false);
     }
