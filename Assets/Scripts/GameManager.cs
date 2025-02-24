@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
     }
 
 
-private void IncrementScore()
+    private void IncrementScore()
     {
         score++;
         scoreText.text = $"Score: {score}";
